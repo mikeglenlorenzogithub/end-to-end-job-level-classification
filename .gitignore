@@ -210,3 +210,5 @@ __marimo__/
 *.json
 *.xlsx
 *.pkl
+
+!env_template.json
