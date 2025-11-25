@@ -1,0 +1,39 @@
+{
+    "LLM": {
+        "GEMINI": {
+            "ACCOUNT": "",
+            "API_KEY": "",
+            "MODEL": "gemini-2.0-flash-001",
+            "RANGE_INPUT": 50
+        }
+    },
+    "EMBEDDING": {
+        "OPENAI": {
+            "ACCOUNT": "",
+            "API_KEY": "",
+            "MODEL": "text-embedding-3-small",
+            "RANGE_INPUT": 50
+        }
+    },
+    "CONTENT_DATE": "2025-11-25",
+    "VERSION": 1,
+    "SOURCE": {
+        "NAME": "google_jobs"
+    },
+    "TARGET": {
+        "NAME": ""
+    },
+    "SCRAPER": {
+        "REPARSE_ONLY": true,
+        "CONTINUE_SCRAPER": false
+    },
+    "CLEANING": {
+        "CONCAT_ONLY": true
+    },
+    "CLASSIFICATION": {
+        "GRID_SEARCH": false,
+        "LOAD_PIPELINE": true,
+        "IS_WEIGHT": true,
+        "IS_PCA": true
+    }
+}
