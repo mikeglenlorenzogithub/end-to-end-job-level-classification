@@ -104,10 +104,14 @@ def gemini_process_response(
             " Output must include uid exactly as provided in the input, without trimming, chopping, or normalization."
             " list input: " + input
         ),
-        config={
-            "response_mime_type": "application/json",
-            "response_schema": response_schema,
-        },
+        config=types.GenerateContentConfig(
+            response_mime_type="application/json",
+            response_schema=response_schema,
+            thinking_config=types.ThinkingConfig(thinking_budget=0),
+            temperature=0,
+            top_p=1,
+            top_k=1,
+        ),
     )
 
     if response.candidates[0].finish_reason.name != 'STOP':
